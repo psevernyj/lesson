@@ -1,0 +1,138 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 20px;
+}
+.header{
+    background-image:linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url('../img/hero.jpg');
+    height: 90vh;
+    background-size: cover;
+    clip-path:polygon(0 0, 0 100%, 100% 80%, 100% 0);
+    position: relative;
+}
+.title{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+
+    font-family: Lato;
+}
+.main-title{
+    font-size: 60px;
+    letter-spacing: 20px;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    animation-name: moveInLeft;
+    animation-duration: 5s;
+}
+.subtitle{
+    font-size: 40px;
+    letter-spacing: 15px;
+    animation-name:moveInRight;
+    animation-duration: 3s;
+    margin-bottom: 30px;
+}
+.main-title:hover {
+    transform:scale(2);
+}
+.logo{
+    height: 50px;
+    position: absolute;
+    top: 50px; left: 50px;
+}
+.button:link, .button:visited{
+    text-decoration: none;
+    color: gray;
+    padding: 10px 30px;
+    background-color: aliceblue;
+    display: inline-block;
+    letter-spacing: 0;
+    border-radius: 4px;
+    transition-duration: 2s;
+    transition-property: transform;
+    animation-name: moveInBottom;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+.button:hover{
+    transform: translateY(-5px);
+}
+
+.button:active{
+    transform: translateY(5px);
+}
+
+@keyframes moveInLeft {
+    0%{
+        transform:translate(-200px) rotate(150deg);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(100px);
+        opacity: 0.8;
+    }
+
+    100%{
+        transform: translate(0);
+    }
+
+}
+@keyframes moveInRight {
+    0%{
+        transform:translateX(200px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-100px);
+        opacity: 0.8;
+    }
+
+    100%{
+        transform: translate(0);
+    }
+
+
+}
+@keyframes moveInBottom {
+    0%{
+        transform:translateY(300px);
+        opacity: 0;
+    }
+        100%{
+        transform: translateY(0);
+            opacity:1;
+    }
+
+
+}
+
+/*.text{
+    font-family: Lato;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: darkgreen;
+    position: absolute;
+    top:-50px;
+    right: 0;
+}
+.section-1{
+    position: relative;
+    height: 100px;
+}*/
