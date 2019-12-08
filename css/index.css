@@ -1,0 +1,214 @@
+.section-1 .container-flex > div .btn-more:visited, .section-1 .container-flex > div .btn-more:link {
+  text-decoration: none;
+  color: green;
+  display: inline-block;
+  padding: 3px 3px 4px;
+  margin-top: 2rem;
+  border-bottom: 1px solid green; }
+
+.section-1 {
+  background-color: #f7f7f7f7;
+  margin-top: -10%;
+  padding-bottom: 30rem; }
+  .section-1 h2 {
+    margin: 30rem 0 10rem 0;
+    display: inline-block;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+    transition: all 0.2s; }
+  .section-1 h2:hover {
+    transform: skewY(2deg) skewX(20deg); }
+  .section-1 .container-flex > div {
+    width: 50%;
+    padding: 0 2rem; }
+    .section-1 .container-flex > div h4 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .section-1 .container-flex > div p {
+      line-height: 2.5rem; }
+    .section-1 .container-flex > div .btn-more {
+      transition: all 0.2s; }
+    .section-1 .container-flex > div .btn-more:hover {
+      background-color: green;
+      color: white;
+      transform: translateY(5px);
+      box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5); }
+    .section-1 .container-flex > div .btn-more:active {
+      transform: translateY(-2px); }
+  .section-1 .container-picture {
+    position: relative;
+    top: 20%; }
+    .section-1 .container-picture .image-collage {
+      width: 55%;
+      position: absolute;
+      border-radius: 3px;
+      box-shadow: 0.5rem 1 rem 1 rem rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      cursor: pointer;
+      outline-offset: 2rem;
+      transition: all 0.2s; }
+      .section-1 .container-picture .image-collage:first-child {
+        left: 0;
+        top: -2rem; }
+      .section-1 .container-picture .image-collage:nth-child(2) {
+        right: 0;
+        top: 2rem; }
+      .section-1 .container-picture .image-collage:last-child {
+        left: 20%;
+        top: 6rem; }
+      .section-1 .container-picture .image-collage:hover {
+        z-index: 20;
+        transform: scale(1.2);
+        outline: 2rem solid #55c57a; }
+    .section-1 .container-picture:hover .image-collage:not(:hover) {
+      transform: scale(0.95); }
+
+.button:link {
+  text-decoration: none;
+  color: gray;
+  padding: 10px 30px;
+  display: inline-block;
+  letter-spacing: 0;
+  border-radius: 4px;
+  transition-duration: 2s;
+  transition-property: transform;
+  animation-name: moveInBottom;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  position: relative; }
+
+.button:visited {
+  text-decoration: none;
+  color: gray;
+  padding: 10px 30px;
+  display: inline-block;
+  letter-spacing: 0;
+  border-radius: 4px;
+  transition-duration: 2s;
+  transition-property: transform;
+  animation-name: moveInBottom;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  position: relative; }
+
+.button-white {
+  background-color: white; }
+  .button-white::after {
+    background-color: aliceblue; }
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 4px;
+  transition: all 0.5s; }
+
+.button:hover {
+  transform: translateY(-5px); }
+
+.button:hover::after {
+  transform: scale(2);
+  opacity: 0; }
+
+.button:active {
+  transform: translateY(5px); }
+
+.text-center {
+  text-align: center; }
+
+.wrapper {
+  max-width: 1800px;
+  margin: auto; }
+
+.container-flex {
+  display: flex; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  padding: 2rem;
+  font-size: 1.6rem;
+  font-family: Lato;
+  color: #777; }
+
+.header {
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  height: 90vh;
+  background-size: cover;
+  clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+  position: relative; }
+  .header .logo {
+    height: 5rem;
+    position: absolute;
+    top: 50px;
+    left: 50px; }
+  .header .title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: white; }
+    .header .title .main-title {
+      font-size: 6rem;
+      letter-spacing: 2rem;
+      transition-property: transform;
+      transition-duration: 2s;
+      transition-timing-function: ease;
+      animation-name: moveInLeft;
+      animation-duration: 5s; }
+      .header .title .main-title:hover {
+        transform: scale(2); }
+    .header .title .subtitle {
+      font-size: 4rem;
+      letter-spacing: 1.5rem;
+      animation-name: moveInRight;
+      animation-duration: 3s;
+      margin-bottom: 3rem; }
+
+@keyframes moveInLeft {
+  0% {
+    transform: translate(-200px) rotate(150deg);
+    opacity: 0; }
+  50% {
+    transform: translateX(100px);
+    opacity: 0.8; }
+  100% {
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(200px);
+    opacity: 0; }
+  50% {
+    transform: translateX(-100px);
+    opacity: 0.8; }
+  100% {
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(300px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }

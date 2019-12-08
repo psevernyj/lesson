@@ -1,0 +1,22 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass sass/base.scss css/index.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psevernyj/lesson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psevernyj/lesson/issues"
+  },
+  "homepage": "https://github.com/psevernyj/lesson#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

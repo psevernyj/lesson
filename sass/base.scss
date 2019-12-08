@@ -1,0 +1,114 @@
+@import "variables";
+@import "section-1";
+@import "button.scss";
+@import "utils";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  padding: 2rem;
+  font-size: 1.6rem;
+  font-family: Lato;
+  color: #777;
+}
+
+.header {
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url('../img/hero.jpg');
+  height: 90vh;
+  background-size: cover;
+  clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+  position: relative;
+
+  .logo {
+    height: 5rem;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+
+  .title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+
+
+    .main-title {
+      font-size: 6rem;
+      letter-spacing: 2rem;
+      transition-property: transform;
+      transition-duration: 2s;
+      transition-timing-function: ease;
+      animation-name: moveInLeft;
+      animation-duration: 5s;
+      &:hover {
+        transform: scale(2);
+      }
+    }
+
+    .subtitle {
+      font-size: 4rem;
+      letter-spacing: 1.5rem;
+      animation-name: moveInRight;
+      animation-duration: 3s;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+
+
+@keyframes moveInLeft {
+  0% {
+    transform: translate(-200px) rotate(150deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(100px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-100px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(0);
+  }
+
+
+}
+
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
