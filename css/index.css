@@ -79,6 +79,7 @@
   .section-2 > * {
     transform: skewY(5deg); }
   .section-2 .box {
+    font-size: 7rem;
     width: calc(100%/4 - 15px);
     height: 300px;
     background-color: rgba(255, 255, 255, 0.5);
@@ -90,15 +91,120 @@
     margin-top: 270px; }
     .section-2 .box:not(:last-child) {
       margin-right: 20px; }
+    .section-2 .box [class*="icon"] {
+      display: inline-block;
+      background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+      -webkit-background-clip: text;
+      color: transparent; }
     .section-2 .box h2 {
+      color: slategray;
       font-size: 2rem;
       text-transform: uppercase; }
     .section-2 .box p {
+      text-align: center;
       font-size: 1.6rem; }
     .section-2 .box .icon {
-      opacity: 0.5;
       width: 100px;
       height: 80px; }
+
+.section-3 {
+  padding: 30rem;
+  background-color: #ffffff; }
+  .section-3 .container-flex {
+    justify-content: space-between; }
+    .section-3 .container-flex .card {
+      width: 30%;
+      height: 50rem;
+      perspective: 1000px;
+      position: relative; }
+      .section-3 .container-flex .card .side {
+        transition: transform 1s;
+        width: 100%;
+        height: 50rem;
+        position: absolute;
+        backface-visibility: hidden;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        border-radius: 4px; }
+      .section-3 .container-flex .card .front {
+        background-color: #ffffff;
+        box-shadow: 0 2rem 4rem; }
+      .section-3 .container-flex .card .back {
+        transform: rotateY(180deg);
+        box-shadow: 0 2rem 4rem; }
+      .section-3 .container-flex .card .back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .section-3 .container-flex .card .back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .section-3 .container-flex .card .back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+      .section-3 .container-flex .card:hover .front {
+        transform: rotateY(-180deg); }
+      .section-3 .container-flex .card:hover .back {
+        transform: rotateY(0deg); }
+      .section-3 .container-flex .card .image {
+        height: 20rem;
+        background-size: cover;
+        background-blend-mode: screen;
+        background-position: center;
+        clip-path: polygon(0 0, 101% 0, 101% 85%, 0% 100%);
+        position: relative; }
+        .section-3 .container-flex .card .image .text {
+          position: absolute;
+          bottom: 70px;
+          right: 0;
+          font-weight: 300;
+          width: 50%; }
+          .section-3 .container-flex .card .image .text .text-clipped {
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+            text-transform: uppercase;
+            color: white;
+            font-size: 2.8rem;
+            padding: 5px; }
+      .section-3 .container-flex .card .img-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
+        .section-3 .container-flex .card .img-1 .text-clipped {
+          background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+      .section-3 .container-flex .card .img-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/nat-6.jpg"); }
+        .section-3 .container-flex .card .img-2 .text-clipped {
+          background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .section-3 .container-flex .card .img-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-7.jpg"); }
+        .section-3 .container-flex .card .img-3 .text-clipped {
+          background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+      .section-3 .container-flex .card .card__details {
+        padding: 3rem; }
+        .section-3 .container-flex .card .card__details ul {
+          list-style: none;
+          width: 80%;
+          margin: 0 auto; }
+          .section-3 .container-flex .card .card__details ul li {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem; }
+            .section-3 .container-flex .card .card__details ul li:not(:last-child) {
+              border-bottom: 1px solid #DCDCDC; }
+      .section-3 .container-flex .card__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center; }
+      .section-3 .container-flex .card .price-box {
+        text-align: center;
+        margin-bottom: 8rem; }
+      .section-3 .container-flex .card .price-only {
+        font-size: 1.4rem;
+        color: white;
+        text-transform: uppercase; }
+      .section-3 .container-flex .card .price-value {
+        font-size: 6rem;
+        color: white;
+        font-weight: 100; }
 
 .button:link {
   text-decoration: none;
@@ -106,12 +212,11 @@
   padding: 10px 30px;
   display: inline-block;
   letter-spacing: 0;
-  border-radius: 4px;
-  transition-duration: 2s;
+  border-radius: 50px;
+  transition-duration: 1s;
   transition-property: transform;
   animation-name: moveInBottom;
-  animation-duration: 3s;
-  animation-delay: 2s;
+  animation-duration: 2s;
   animation-fill-mode: backwards;
   position: relative; }
 
@@ -121,12 +226,11 @@
   padding: 10px 30px;
   display: inline-block;
   letter-spacing: 0;
-  border-radius: 4px;
-  transition-duration: 2s;
+  border-radius: 50px;
+  transition-duration: 1s;
   transition-property: transform;
   animation-name: moveInBottom;
-  animation-duration: 3s;
-  animation-delay: 2s;
+  animation-duration: 2s;
   animation-fill-mode: backwards;
   position: relative; }
 
@@ -143,7 +247,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  border-radius: 4px;
+  border-radius: 50px;
   transition: all 0.5s; }
 
 .button:hover {
@@ -243,3 +347,13 @@ body {
   100% {
     transform: translateY(0);
     opacity: 1; } }
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 7px; }
+    html .section-1 {
+      width: 100%; }
+      html .section-1 .container-flex {
+        flex-wrap: wrap; }
+      html .section-1 .container-flex > div {
+        width: 100%; } }

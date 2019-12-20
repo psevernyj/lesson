@@ -1,6 +1,7 @@
 @import "variables";
 @import "section-1";
 @import "Section-2";
+@import "section-3";
 @import "button.scss";
 @import "utils";
 
@@ -43,7 +44,6 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: white;
-
 
     .main-title {
       font-size: 6rem;
@@ -111,5 +111,19 @@ body {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 800px) {
+  html{
+    font-size: 7px;
+    .section-1{
+      width: 100%;
+      .container-flex{
+        flex-wrap: wrap;
+      }
+      .container-flex > div{
+        width: 100%;
+      }
+    }
   }
 }
