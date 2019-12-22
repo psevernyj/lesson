@@ -1,0 +1,107 @@
+.section-4{
+  position: relative;
+  background-size: cover;
+
+  .story{
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 50%;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 0 2rem 4rem rgba(0,0,0, 0.3);
+    padding: 6rem;
+    transform: skewX(-10deg);
+    margin-bottom: 10rem;
+
+
+    .shape{
+      position: relative;
+      height: 15rem;
+      width: 15rem;
+      float: left;
+      clip-path: circle(50%);
+      shape-outside: circle(50%);
+      transform: translate(-10%) skewX(10deg);
+      .img {
+        height: 100%;
+        object-fit: cover;
+        transform: translateX(-15%) scale(1.3);
+        transition: all 0.5s;
+      }
+      .caption{
+        position: absolute;
+        top:50%; left: 50%;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        opacity: 0;
+        transform: translate(-50%, 50%);
+        transition: all 0.2s;
+      }
+
+    }
+    &:hover {
+      .img{
+        filter: blur(4px);
+        transform: translateX(-15%) scale(1);
+      }
+      .caption{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+
+      }
+
+
+    }
+
+    .text{
+      padding-left: 10px;
+      margin-top: 1.8rem;
+      transform: skewX(10deg);
+    }
+  }
+  .story>*{
+    transform: skewX(10deg);
+
+  }
+  .bg-video{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.25;
+    z-index: -1;
+    //padding: 15rem 0;
+
+
+    video{
+      object-fit: cover;
+      position: absolute;
+     // left: 0;
+      width: 100%;
+      height: 100%;
+     // transform: translateX(calc((100% - 100vw) / 2));
+    }
+  }
+
+  .btn-more:visited{
+    @extend %button;
+  }
+  .btn-more:link{
+    @extend %button;
+  }
+  .btn-more{
+    transition: all 0.2s;
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+  .btn-more:hover{
+    background-color: lightgreen;
+    color: white;
+    transform: translateY(5px);
+    box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
+  }
+  .btn-more:active{
+    transform: translateY(-2px);
+  }
+
+}

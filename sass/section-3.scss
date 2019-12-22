@@ -1,7 +1,5 @@
 .section-3 {
-  padding: 30rem;
   background-color: #ffffff;
-
   .container-flex {
     justify-content: space-between;
     .card {
@@ -132,5 +130,7 @@
     }
 
   }
-
+ .button {
+   margin: 10rem;
+ }
 }

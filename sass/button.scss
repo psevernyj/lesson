@@ -1,6 +1,6 @@
 @mixin button-style {
   text-decoration: none;
-  color: gray;
+  text-transform: uppercase;
   padding: 10px 30px;
   display: inline-block;
   letter-spacing: 0;
@@ -24,10 +24,22 @@
 
   &-white {
     background-color: white;
+    color: gray;
 
     &::after {
       background-color: aliceblue;
+      color: gray;
     }
+  }
+  &-green, &-green:link, &-green:visited {
+    background-color: lightgreen;
+    color: white;
+    animation: none;
+
+  }
+  &::after {
+    background-color: lightgreen;
+    color: white;
   }
 
   &::after {

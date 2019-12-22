@@ -1,43 +1,23 @@
 %button{
   text-decoration: none;
-  color:green;
+  color:lightgreen;
   display: inline-block;
   padding: 3px 3px 4px;
   margin-top: 2rem;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid lightgreen;
 }
 
 .section-1{
   background-color: #f7f7f7f7;
   margin-top: -10%;
   padding-bottom: 30rem;
-
-    h2{
-      margin: 30rem 0 10rem 0;
-      display: inline-block;
-      font-size:3.5rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      -webkit-background-clip:text;
-      color:transparent;
-      background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
-      transition: all 0.2s;
-     }
-    h2:hover {
-      transform: skewY(2deg) skewX(20deg);
-    }
+  .skewed-title{
+    margin-top: 20rem;
+  }
   .container-flex > div{
     width: 50%;
     padding: 0 2rem;
-    h4{
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    p{
-      line-height: 2.5rem;
-    }
+
     .btn-more:visited{
       @extend %button;
     }
@@ -48,7 +28,7 @@
       transition: all 0.2s;
     }
     .btn-more:hover{
-      background-color: green;
+      background-color: lightgreen;
       color: white;
       transform: translateY(5px);
       box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
